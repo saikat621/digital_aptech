@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.digitalaptechapplication.feature.dashboard.DashboardFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.digitalaptechapplication.feature.dashboard.DashboardViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_user_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_list"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_10sdp"
+            android:onClick="@{(v) -> viewModel.onClick(v)}"/>
+
+        <Button
+            android:id="@+id/btn_add_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_user"
+            android:layout_below="@+id/btn_user_list"
+            android:layout_alignStart="@+id/btn_user_list"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:onClick="@{(v) -> viewModel.onClick(v)}"/>
+    </RelativeLayout>
+</layout>
